@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Journal by Kervin Kyle Lubayan — Personal stories, photography, and reflections from NAIA runways, Filipino food, and life on the move.">
+    <meta name="keywords" content="Travel Journal, NAIA Runway, Philippine Travel, Travel Photography, Filipino Culture, Jollibee, Carinderia, Tourism">
+    <meta name="author" content="Kervin Kyle Lubayan, John Oliver Martillos">
+    <title>Kervin Kyle Lubayan — Travel Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700&amp;family=Bebas+Neue&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/icon/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- ══ HIGHLIGHT TOOLBAR ══ -->
+<div class="highlight-toolbar" id="highlightToolbar" role="toolbar" aria-label="Text highlight options">
+  <span class="hl-label">Highlight</span>
+  <button class="hl-btn gold" onclick="applyHighlight('hl-gold')" title="Gold highlight">
+    <span class="hl-dot gold" aria-hidden="true"></span> Gold
+  </button>
+  <button class="hl-btn rust" onclick="applyHighlight('hl-rust')" title="Rust highlight">
+    <span class="hl-dot rust" aria-hidden="true"></span> Red
+  </button>
+  <button class="hl-btn moss" onclick="applyHighlight('hl-moss')" title="Moss highlight">
+    <span class="hl-dot moss" aria-hidden="true"></span> Green
+  </button>
+  <button class="hl-btn clear" onclick="clearHighlights()" title="Clear all highlights">✕ Clear</button>
+</div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#masthead-hero" onclick="closeMobileNav()">Home</a>
+  <a href="#features" onclick="closeMobileNav()">Features</a>
+  <a href="#trends" onclick="closeMobileNav()">Trends</a>
+  <a href="#photo-essay" onclick="closeMobileNav()">Photography</a>
+  <a href="#food" onclick="closeMobileNav()">Food</a>
+  <a href="#essay" onclick="closeMobileNav()">Essay</a>
+  <div class="mobile-nav-line"></div>
+  <div class="mobile-nav-sub">BSTM 603 &nbsp;·&nbsp; Vol. I</div>
+</nav>
+
+<!-- ══ MASTHEAD ══ -->
+<header class="masthead">
+  <div class="masthead-noise"></div>
+  <div class="masthead-topbar" id="topbar">
+    <div class="masthead-logo">
+        <img src="./assets/icon/logo.svg" alt="Kervin Kyle Lubayan Travel Journal">
+    </div>
+    <nav class="masthead-nav" aria-label="Main navigation">
+      <a href="#masthead-hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#trends">Trends</a>
+      <a href="#photo-essay">Photography</a>
+      <a href="#food">Food</a>
+      <a href="#essay">Essay</a>
+    </nav>
+    <div class="masthead-issue">BSTM 603 &nbsp;·&nbsp; Vol. I</div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="masthead-hero" id="masthead-hero">
+    <div class="masthead-hero-left">
+      <span class="vol-label">Travel Journal · 2024–2026</span>
+      <p class="masthead-eyebrow">Kervin Kyle A. Lubayan</p>
+      <h1 class="masthead-title">
+        TRAVEL
+        <span>JOURNAL</span>
+      </h1>
+      <p class="masthead-sub">Stories from the runway, the street, and the heart of Filipino life — written from the ground up.</p>
+      <a href="#features" class="masthead-cta">Read the Stories <span class="masthead-cta-arrow">→</span></a>
+    </div>
+    <div class="masthead-hero-right">
+      <div class="masthead-img-wrap">
+        <img src="./assets/img/NAIA_Terminal_Runaway-1.png" alt="NAIA Runway">
+        <div class="masthead-img-caption">NAIA Terminal Runway<br>January 28, 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="masthead-scrollhint">
+    <div class="scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</header>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    TRAVEL TRENDS 2021–2026 <span class="ticker-sep">◆</span> CARINDERIA CULTURE IN PASAY <span class="ticker-sep">◆</span> HELLO, GOODBYE — NAIA RUNWAY <span class="ticker-sep">◆</span> CHIMKEN JOY — JOLLIBEE & THE FILIPINO SOUL <span class="ticker-sep">◆</span> GOLDEN SUNSET AVIATION <span class="ticker-sep">◆</span> PHOTO EDITING: BEFORE & AFTER <span class="ticker-sep">◆</span> TRAVEL TRENDS 2021–2026 <span class="ticker-sep">◆</span> CARINDERIA CULTURE IN PASAY <span class="ticker-sep">◆</span> HELLO, GOODBYE — NAIA RUNWAY <span class="ticker-sep">◆</span> CHIMKEN JOY — JOLLIBEE & THE FILIPINO SOUL <span class="ticker-sep">◆</span> GOLDEN SUNSET AVIATION <span class="ticker-sep">◆</span> PHOTO EDITING: BEFORE & AFTER <span class="ticker-sep">◆</span>
+  </div>
+</div>
+
+<!-- ══ FEATURE GRID ══ -->
+<div id="features">
+  <div class="section-head">
+    <span class="section-head-num">01</span>
+    <span class="section-head-label">Featured Stories</span>
+    <div class="section-head-rule"></div>
+  </div>
+  <div class="feature-grid">
+    <div class="feat-card feat-a" onclick="openModal('m-hello')" style="min-height:520px;">
+      <img class="thumb" src="./assets/img/NAIA_Terminal_Runaway.png" alt="NAIA Runway planes">
+      <div class="card-over">
+        <span class="card-over-cat">Photography · Essay</span>
+        <h2 class="card-over-title">Hello, Goodbye — Stories from the NAIA Runway</h2>
+        <span class="card-over-read">Read Essay →</span>
+      </div>
+    </div>
+    <div class="feat-card feat-b" onclick="openModal('m-trends')" style="min-height:260px;">
+      <img class="thumb" src="./assets/img/before-2.png" alt="World travel">
+      <div class="card-over">
+        <span class="card-over-cat">Travel Trends</span>
+        <h2 class="card-over-title">The Decade in Travel: Past 5 Years & What's Next</h2>
+        <span class="card-over-read">Read Article →</span>
+      </div>
+    </div>
+    <div class="feat-card feat-c" onclick="openModal('m-jollibee')" style="min-height:260px;">
+      <img class="thumb" src="./assets/img/jabee.png" alt="Fried chimken">
+      <div class="card-over">
+        <span class="card-over-cat">Food Culture · Essay</span>
+        <h2 class="card-over-title">"Chimken Joy" — Jollibee & the Filipino Soul</h2>
+        <span class="card-over-read">Read Essay →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TRAVEL TRENDS ══ -->
+<div id="trends">
+  <div class="section-head">
+    <span class="section-head-num">02</span>
+    <span class="section-head-label">Travel Trends</span>
+    <div class="section-head-rule"></div>
+  </div>
+  <div class="split-section">
+    <div class="split-left">
+      <p class="split-eyebrow">Past 5 Years · 2021–Present</p>
+      <div class="split-number">05</div>
+      <h2 class="split-title">The trends that reshaped how the world moves</h2>
+      <div class="split-body">
+        <p>The global travel landscape has undergone profound transformation, transitioning from high-speed mass tourism to more intentional and technology-driven experiences.</p>
+        <div class="tag-row">
+          <span class="split-tag">Revenge Travel</span>
+          <span class="split-tag">Workcations</span>
+          <span class="split-tag">Staycations</span>
+          <span class="split-tag">Contactless Tech</span>
+          <span class="split-tag">Solo Travel</span>
+        </div>
+      </div>
+    </div>
+    <div class="split-right">
+      <p class="split-eyebrow">Next 5 Years · Late 2020s</p>
+      <div class="split-number">03</div>
+      <h2 class="split-title">Where the industry is headed next</h2>
+      <div class="split-body">
+        <p>As we enter the late 20s, the industry has been innovating — and the next wave is more intentional, more personal, more restorative.</p>
+        <div class="tag-row">
+          <span class="split-tag accent">AI Itineraries</span>
+          <span class="split-tag accent">Regenerative Tourism</span>
+          <span class="split-tag accent">Wellness Stays</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trends-section" style="margin-top:40px;">
+    <div class="trends-grid">
+      <div class="trend-card past">
+        <div class="trend-num">01</div>
+        <p class="trend-era">Past Trend · 2021</p>
+        <h3 class="trend-name">Revenge Travel</h3>
+        <p class="trend-desc">Following global lockdowns, a massive surge in international bookings occurred as travelers sought to reclaim missed experiences.</p>
+      </div>
+      <div class="trend-card past">
+        <div class="trend-num">02</div>
+        <p class="trend-era">Past Trend</p>
+        <h3 class="trend-name">Workcations & Blended</h3>
+        <p class="trend-desc">The rise of remote work blurred the lines between business and leisure, popularized by digital nomad visas in over 30 countries.</p>
+      </div>
+      <div class="trend-card past">
+        <div class="trend-num">03</div>
+        <p class="trend-era">Past Trend</p>
+        <h3 class="trend-name">Contactless Technology</h3>
+        <p class="trend-desc">Mobile check-ins and biometric boarding transitioned from luxury features to essential safety and efficiency standards.</p>
+      </div>
+      <div class="trend-card future">
+        <div class="trend-num">01</div>
+        <p class="trend-era">Future Trend · Late 2020s</p>
+        <h3 class="trend-name">AI Itineraries</h3>
+        <p class="trend-desc">Artificial intelligence has evolved to offer genuine operational efficiency, personalizing travel plans in real time.</p>
+      </div>
+      <div class="trend-card future">
+        <div class="trend-num">02</div>
+        <p class="trend-era">Future Trend</p>
+        <h3 class="trend-name">Regenerative Tourism</h3>
+        <p class="trend-desc">Focus is shifting from sustainable to regenerative travel, where tourists actively contribute to restoring local ecosystems.</p>
+      </div>
+      <div class="trend-card future">
+        <div class="trend-num">03</div>
+        <p class="trend-era">Future Trend</p>
+        <h3 class="trend-name">Wellness-Centric Stays</h3>
+        <p class="trend-desc">Hospitality is moving beyond simple spas toward focusing on sleep architecture, circadian lighting, and holistic wellbeing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PULL QUOTE ══ -->
+<div class="quote-band">
+  <blockquote>"Every goodbye is just the start of a new story. Even when leaving feels sad, the sunset reminds me that there is always a light waiting at the end of the journey."</blockquote>
+  <cite>— Kervin Kyle Lubayan, NAIA Terminal Runway, January 28, 2024</cite>
+</div>
+
+<!-- ══ PHOTO ESSAY ══ -->
+<div id="photo-essay" class="photo-essay">
+  <div class="section-head" style="padding:0;margin-bottom:48px;">
+    <span class="section-head-num">03</span>
+    <span class="section-head-label">Photography</span>
+    <div class="section-head-rule"></div>
+  </div>
+  <div class="essay-header">
+    <div class="essay-vert-text">NAIA</div>
+    <div class="essay-header-content">
+      <h2 class="essay-big-title">
+        Hello,
+        <em>Goodbye</em>
+      </h2>
+      <p class="essay-intro">Three photographs taken at the NAIA Terminal runway — a departing Cebu Pacific, a night boarding aircraft, and a golden sunset — each telling a different story of leaving and coming home. Shot and edited by Kervin Kyle Lubayan, 2024.</p>
+    </div>
+  </div>
+  <div class="photo-row">
+    <div class="photo-item" style="min-height:360px;cursor:pointer;" onclick="openModal('m-hello')">
+      <img src="./assets/img/NAIA_Terminal_Runaway.png" alt="Departing plane on runway" style="height:100%;min-height:360px">
+      <div class="photo-label">Hello, Goodbye · Jan 28, 2024</div>
+    </div>
+    <div class="photo-item" style="min-height:360px;cursor:pointer;" onclick="openModal('m-night')">
+      <img src="./assets/img/NAIA_Terminal_Runaway-1.png" alt="Night boarding aircraft" style="height:100%;min-height:360px;filter:brightness(.85)">
+      <div class="photo-label">Night Boarding · Jul 28, 2024</div>
+    </div>
+    <div class="photo-item" style="min-height:360px;cursor:pointer;" onclick="openModal('m-sunset')">
+      <img src="./assets/img/NAIA_Terminal_Runaway-2.png" alt="Golden sunset at airport" style="height:100%;min-height:360px">
+      <div class="photo-label">Golden Sunset · 6:36 PM Jan 28, 2024</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BEFORE & AFTER ══ -->
+<div class="edit-section" id="editing">
+  <div class="edit-header">
+    <div class="edit-bigtitle">BEFORE<br>&amp; AFTER</div>
+    <div class="edit-subtitle">Photo editing breakdown<br>— three NAIA shots</div>
+  </div>
+  <div class="ba-tabs">
+    <button class="ba-tab active" onclick="switchTab(0)">Hello, Goodbye</button>
+    <button class="ba-tab" onclick="switchTab(1)">Night Boarding</button>
+    <button class="ba-tab" onclick="switchTab(2)">Golden Sunset</button>
+  </div>
+  <div class="ba-panel active" id="ba0">
+    <div>
+      <div class="ba-compare" id="slider0">
+        <img src="./assets/img/before.png" alt="Before edit" style="filter:saturate(0.3) brightness(0.85) contrast(0.9)">
+        <img class="ba-after-img" src="./assets/img/before.png" alt="After edit" style="filter:saturate(1.15) brightness(1.05) contrast(1.1)">
+        <div class="ba-divider" id="div0"></div>
+        <div class="ba-handle" id="hand0">⇔</div>
+        <div class="ba-labels">
+          <span class="ba-label">BEFORE</span>
+          <span class="ba-label">AFTER</span>
+        </div>
+      </div>
+      <p class="ba-hint">← Drag slider to compare →</p>
+    </div>
+    <div class="ba-stats">
+      <div class="ba-stat-title">Hello, Goodbye</div>
+      <div class="ba-stat-date">January 28, 2024</div>
+      <div class="ba-row"><span class="ba-prop">Temperature</span><span class="ba-val pos">+15</span></div>
+      <div class="ba-row"><span class="ba-prop">Vibrance</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Saturation</span><span class="ba-val pos">+10</span></div>
+      <div class="ba-row"><span class="ba-prop">Exposure</span><span class="ba-val pos">+10 to +20</span></div>
+      <div class="ba-row"><span class="ba-prop">Contrast</span><span class="ba-val pos">+15</span></div>
+      <div class="ba-row"><span class="ba-prop">Highlights</span><span class="ba-val neg">−30</span></div>
+      <div class="ba-row"><span class="ba-prop">Shadows</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Dehaze</span><span class="ba-val pos">+10</span></div>
+      <div class="ba-row"><span class="ba-prop">Sharpen</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Vignette</span><span class="ba-val neg">−5</span></div>
+    </div>
+  </div>
+  <div class="ba-panel" id="ba1">
+    <div>
+      <div class="ba-compare" id="slider1">
+        <img src="./assets/img/before-1.png" alt="Before night" style="filter:saturate(0.4) brightness(0.6) contrast(0.85)">
+        <img class="ba-after-img" src="./assets/img/before-1.png" alt="After night" style="filter:saturate(0.9) brightness(0.85) contrast(1.1) hue-rotate(-8deg)">
+        <div class="ba-divider" id="div1"></div>
+        <div class="ba-handle" id="hand1">⇔</div>
+        <div class="ba-labels">
+          <span class="ba-label">BEFORE</span>
+          <span class="ba-label">AFTER</span>
+        </div>
+      </div>
+      <p class="ba-hint">← Drag slider to compare →</p>
+    </div>
+    <div class="ba-stats">
+      <div class="ba-stat-title">Night Boarding Aircraft</div>
+      <div class="ba-stat-date">July 28, 2024</div>
+      <div class="ba-row"><span class="ba-prop">Exposure</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Contrast</span><span class="ba-val pos">+10</span></div>
+      <div class="ba-row"><span class="ba-prop">Highlights</span><span class="ba-val neg">−20</span></div>
+      <div class="ba-row"><span class="ba-prop">Shadows</span><span class="ba-val pos">+40</span></div>
+      <div class="ba-row"><span class="ba-prop">Temperature</span><span class="ba-val neg">−5 (cooler)</span></div>
+      <div class="ba-row"><span class="ba-prop">Vibrance</span><span class="ba-val pos">+15</span></div>
+      <div class="ba-row"><span class="ba-prop">Noise Reduction</span><span class="ba-val pos">+25</span></div>
+      <div class="ba-row"><span class="ba-prop">Sharpen</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Clarity</span><span class="ba-val pos">+10</span></div>
+      <div class="ba-row"><span class="ba-prop">Vignette</span><span class="ba-val neg">−10</span></div>
+    </div>
+  </div>
+  <div class="ba-panel" id="ba2">
+    <div>
+      <div class="ba-compare" id="slider2">
+        <img src="./assets/img/before-2.png" alt="Before sunset" style="filter:saturate(0.5) brightness(0.9) contrast(0.9)">
+        <img class="ba-after-img" src="./assets/img/before-2.png" alt="After sunset" style="filter:saturate(1.3) brightness(0.95) contrast(1.2) hue-rotate(5deg)">
+        <div class="ba-divider" id="div2"></div>
+        <div class="ba-handle" id="hand2">⇔</div>
+        <div class="ba-labels">
+          <span class="ba-label">BEFORE</span>
+          <span class="ba-label">AFTER</span>
+        </div>
+      </div>
+      <p class="ba-hint">← Drag slider to compare →</p>
+    </div>
+    <div class="ba-stats">
+      <div class="ba-stat-title">Golden Sunset Aviation</div>
+      <div class="ba-stat-date">6:36 PM · January 28, 2024</div>
+      <div class="ba-row"><span class="ba-prop">Exposure</span><span class="ba-val neg">−5</span></div>
+      <div class="ba-row"><span class="ba-prop">Contrast</span><span class="ba-val pos">+25</span></div>
+      <div class="ba-row"><span class="ba-prop">Highlights</span><span class="ba-val neg">−40</span></div>
+      <div class="ba-row"><span class="ba-prop">Shadows</span><span class="ba-val pos">+30</span></div>
+      <div class="ba-row"><span class="ba-prop">Temperature</span><span class="ba-val pos">+10</span></div>
+      <div class="ba-row"><span class="ba-prop">Vibrance</span><span class="ba-val pos">+25</span></div>
+      <div class="ba-row"><span class="ba-prop">Saturation</span><span class="ba-val pos">+12</span></div>
+      <div class="ba-row"><span class="ba-prop">Dehaze</span><span class="ba-val pos">+20</span></div>
+      <div class="ba-row"><span class="ba-prop">Clarity</span><span class="ba-val pos">+15</span></div>
+      <div class="ba-row"><span class="ba-prop">Sharpen</span><span class="ba-val pos">+15</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOD ══ -->
+<div id="food" class="food-section">
+  <div class="food-left">
+    <div class="food-big-num">03</div>
+    <div>
+      <h2 class="food-left-title">Top 3 Best Carinderia in Pasay</h2>
+      <p class="food-left-sub">Food & Travel · BSTM 603</p>
+    </div>
+  </div>
+  <div class="food-right">
+    <p class="food-intro">Have you ever been in Pasay? Behind the luxury hotels and big malls, the true heart of the city beats in its small local eateries — where the best Filipino food is also the most affordable.</p>
+    <div class="food-items">
+      <div class="food-item">
+        <div class="food-item-rank">1</div>
+        <div>
+          <div class="food-item-name">Kambal Eatery</div>
+          <div class="food-item-location">Cabrera St. Corner Vergel, Pasay</div>
+          <p class="food-item-desc">Known for Kapampangan specialties with fast turnover — often selling out by afternoon. Features Sisig, Menudo, Betute Tugak (stuffed frogs), and Adobong Kamaru (mole crickets in vinegar and garlic).</p>
+        </div>
+      </div>
+      <div class="food-item">
+        <div class="food-item-rank">2</div>
+        <div>
+          <div class="food-item-name">Libertad Carinderia (Cartimar)</div>
+          <div class="food-item-location">Libertad Market, Pasay</div>
+          <p class="food-item-desc">Unnamed stalls offering authentic daily-cooked Filipino meals. No fixed menu — also serves international dishes like sushi and dumplings. Most popular among travelers and local residents.</p>
+        </div>
+      </div>
+      <div class="food-item">
+        <div class="food-item-rank">3</div>
+        <div>
+          <div class="food-item-name">MJ Carinderia</div>
+          <div class="food-item-location">F.B. Harrison Street, Pasay City</div>
+          <p class="food-item-desc">Daily home-made dishes and meryenda specialties including Puto, Maja, and Bilo-Bilo (glutinous rice balls). Located near Star City, approximately 15–20 minutes from Roxas Boulevard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ESSAY ══ -->
+<div id="essay" class="essay-section">
+  <div class="essay-content">
+    <p class="essay-kicker">Food Culture · Essay · BSTM 603</p>
+    <h2 class="essay-headline">"Chimken Joy"</h2>
+    <div class="essay-drop">
+      <p>The sight of a gold-and-red logo paired with the aroma of fried chicken is a familiar experience that resonates deeply within Filipino households. Jollibee has transcended its status as a mere fast-food chain to become a cultural landmark, representing comfort and celebration for millions. For many, a meal consisting of Chimkenjoy, spaghetti, fries, and a cold drink is not just food — it is a symbol of achievement and familial bonding.</p>
+      <p>At the heart of this experience is the "Chickenjoy," often affectionately referred to by children as "chimken." This specific combination of crispy fried chicken, sweet-style spaghetti, and fries has become the standard traditional reward for Filipino children. Whether it is celebrating a high grade on a report card, a birthday, or simply a successful week at school, a trip to Jollibee is the primary incentive used by parents to motivate and reward their children.</p>
+      <p>The appeal lies in the unique flavor profile — the savory, juice-filled chicken paired with a distinctively sweet spaghetti sauce, specifically tailored to the Filipino palate. This meal, accompanied by a refreshing glass of Coke, creates a sensory experience that children associate with happiness and positive reinforcement.</p>
+      <p>In conclusion, Jollibee serves as more than just a quick-service restaurant — it is a staple of Filipino childhood and family traditions. By functioning as a universal reward for small and large milestones, the "Chickenjoy" meal has cemented itself in the local culture.</p>
+    </div>
+  </div>
+  <div class="essay-sidebar">
+    <div class="sidebar-image-wrap">
+      <img class="sidebar-image" src="./assets/img/jabee.png" alt="Fried chicken meal">
+      <p class="sidebar-caption">Chickenjoy meal at Jollibee — Lubayan, Kervin Kyle A. · BSTM 603</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div>
+    <div class="masthead-logo">
+        <img src="./assets/icon/logo.svg" alt="Kervin Kyle Lubayan Travel Journal">
+    </div>
+    <p class="footer-desc">A travel, food, and photography portfolio by Kervin Kyle A. Lubayan — Bachelor of Science in Tourism Management, BSTM 603.</p>
+  </div>
+  <div>
+    <p class="footer-col-head">Articles</p>
+    <div class="footer-links">
+      <a href="#" onclick="openModal('m-trends');return false">The Decade in Travel</a>
+      <a href="#" onclick="openModal('m-carinderia');return false">Top 3 Carinderia in Pasay</a>
+      <a href="#" onclick="openModal('m-hello');return false">Hello, Goodbye</a>
+      <a href="#" onclick="openModal('m-jollibee');return false">Chimken Joy</a>
+    </div>
+  </div>
+  <div>
+    <p class="footer-col-head">Details</p>
+    <div class="footer-links">
+      <a>Lubayan, Kervin Kyle A.</a>
+      <a>BSTM 603 — Tourism Management</a>
+      <a>Submitted May 25, 2026</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Kervin Kyle A. Lubayan · BSTM 603 · All Rights Reserved</div>
+</footer>
+
+<!-- ══ MODALS ══ -->
+<div class="modal-overlay" id="m-hello" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-hello')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="./assets/img/NAIA_Terminal_Runaway.png" alt="Hello, Goodbye — Departing plane">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Photography · Essay · NAIA Terminal</p>
+      <h2 class="modal-headline">Hello, Goodbye</h2>
+      <p class="modal-byline">Kervin Kyle Lubayan &nbsp;·&nbsp; BSTM 603 &nbsp;·&nbsp; 2024</p>
+      <div class="modal-text">
+        <h3>Photo 1 — Hello, Goodbye (January 28, 2024)</h3>
+        <div class="credit-box">Photo taken by Kervin Kyle Lubayan at the NAIA Terminal runway on January 28, 2024</div>
+        <p>On January 28, 2024, I stood on the NAIA Terminal runway and watched two planes cross paths. This moment made me realize that life is often a mix of endings and beginnings. To me, a departing plane represents a difficult choice — the "quiet bravery" of people leaving their families and personal happiness behind to work for a better future.</p>
+        <p>On the other hand, an arriving plane is full of joy. It represents the end of a long, lonely distance and the excitement of finally coming home to loved ones. Standing there as a ground crew member, I saw that every goodbye is just the start of a new story.</p>
+        <div class="pull">"I stood there between the two, watching the sky trade one story for another."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-night" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-night')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="./assets/img/NAIA_Terminal_Runaway-1.png" alt="Night Boarding Aircraft" style="filter:brightness(.85)">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Photography · Essay · NAIA Terminal</p>
+      <h2 class="modal-headline">Night Boarding Aircraft</h2>
+      <p class="modal-byline">Kervin Kyle Lubayan &nbsp;·&nbsp; BSTM 603 &nbsp;·&nbsp; July 28, 2024</p>
+      <div class="modal-text">
+        <h3>Photo 2 — Night Boarding Aircraft (July 28, 2024)</h3>
+        <div class="credit-box">Photo taken by Kervin Kyle Lubayan at the NAIA Terminal runway on July 28, 2024</div>
+        <p>Why do we find ourselves mesmerized by the sight of a steel giant breathing under the glow of floodlights? For a third-year college student, this scene is more than a logistical transition — it is a visual metaphor for the threshold between the known and the unknown.</p>
+        <p>"Night Boarding Aircraft" is a symbol of transition that mirrors my own academic journey. Progress is rarely made in the bright light of day alone — it happens in the late hours, in the shadows and the grit of the "night shift" of our lives.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-sunset" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-sunset')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="./assets/img/NAIA_Terminal_Runaway-2.png" alt="Golden Sunset Aviation">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Photography · Essay · NAIA Terminal</p>
+      <h2 class="modal-headline">Golden Sunset Aviation</h2>
+      <p class="modal-byline">Kervin Kyle Lubayan &nbsp;·&nbsp; BSTM 603 &nbsp;·&nbsp; 6:36 PM, January 28, 2024</p>
+      <div class="modal-text">
+        <h3>Photo 3 — Golden Sunset Aviation (6:36 PM, January 28, 2024)</h3>
+        <div class="credit-box">Photo taken by Kervin Kyle Lubayan at the NAIA Terminal runway at 6:36 PM on January 28, 2024</div>
+        <p>A sunset at an airport is rarely just the end of a day — it represents the threshold of a new light and the inevitable rise of the light elsewhere. For a third-year college student, this transition is deeply symbolic. The golden hour reflects the bittersweet reality of personal growth.</p>
+        <div class="pull">"Every descent is merely the groundwork for a new ascent."</div>
+        <p>Standing within the expansive bay of NAIA, I was struck by the stillness of the asphalt stretching toward the fading light. Even as the natural light wanes, the presence of the workers who remain disciplined long after the sun dips below the horizon highlights profound persistence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-trends" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-trends')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="./assets/img/NAIA_Terminal_Runaway-2.png" alt="World travel map">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Travel Trends · BSTM 603</p>
+      <h2 class="modal-headline">The Decade in Travel: Past 5 Years & What's Next</h2>
+      <p class="modal-byline">Lubayan, Kervin Kyle A. &nbsp;·&nbsp; May 25, 2026</p>
+      <div class="modal-text">
+        <p>The global travel landscape has undergone profound transformation over the decade, transitioning from a period of high-speed mass tourism to more intentional and technology-driven experiences.</p>
+        <h3>Past 5 Years (2021 - Present)</h3>
+        <div class="tag-row">
+          <span class="tag">Revenge Travel</span><span class="tag">Workcations & Blended</span><span class="tag">Domestic Staycations</span><span class="tag">Contactless Technology</span><span class="tag">Solo & Meaningful Travel</span>
+        </div>
+        <p>Following global lockdowns, a massive surge in international bookings occurred as travelers sought to reclaim experiences. The rise of remote work blurred the lines between business and leisure, popularized by digital nomad visas in over 30 countries.</p>
+        <p>Mobile check-ins and biometric boarding transitioned from luxury features to essential safety and efficiency standards. Solo travel grew significantly as travelers sought personal growth over group sightseeing.</p>
+        <h3>Next 5 Years (Late 2020s)</h3>
+        <div class="tag-row">
+          <span class="tag a">AI Itineraries</span><span class="tag a">Regenerative Tourism</span><span class="tag a">Wellness-Centric Stays</span>
+        </div>
+        <p>Artificial intelligence has evolved to offer genuine operational efficiency, personalizing travel plans in real time. The focus is shifting from sustainable to regenerative travel, where tourists actively contribute to restoring local ecosystems.</p>
+        <div class="pull">"The next wave of travel is more intentional, more personal, more restorative."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-jollibee" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-jollibee')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="./assets/img/jabee.png" alt="Fried chicken">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Food Culture · Essay · BSTM 603</p>
+      <h2 class="modal-headline">"Chimken Joy"</h2>
+      <p class="modal-byline">Lubayan, Kervin Kyle A. &nbsp;·&nbsp; BSTM 603</p>
+      <div class="modal-text">
+        <p>The sight of a gold-and-red logo paired with the aroma of fried chicken is a familiar experience that resonates deeply within Filipino households. Jollibee has transcended its status as a mere fast-food chain to become a cultural landmark, representing comfort and celebration for millions.</p>
+        <p>At the heart of this experience is the "Chickenjoy," often affectionately referred to by children as "chimken." This combination of crispy fried chicken, sweet-style spaghetti, and fries has become the standard traditional reward for Filipino children.</p>
+        <div class="pull">"For many Filipinos, joy is often found in the simplest of meals."</div>
+        <p>In conclusion, Jollibee serves as more than just a quick-service restaurant — it is a staple of Filipino childhood and family traditions. The "Chickenjoy" meal has cemented itself in local culture, proving that for many Filipinos, joy is often found in the simplest of meals.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-carinderia" onclick="closeOnBg(event,this)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m-carinderia')">✕</button>
+    <div class="modal-img-col">
+      <img class="modal-hero-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80" alt="Filipino food spread">
+    </div>
+    <div class="modal-body-wrap">
+      <p class="modal-kicker">Food & Travel · BSTM 603</p>
+      <h2 class="modal-headline">Top 3 Best Carinderia in Pasay</h2>
+      <p class="modal-byline">Lubayan, Kervin Kyle &nbsp;·&nbsp; Food Lover's Guide</p>
+      <div class="modal-text">
+        <p>Have you ever been in Pasay? Pasay City, known as the Philippines' "Travel City," serves as the gateway due to the Ninoy Aquino International Airport (NAIA). Behind the luxurious places and high-end restaurants, some people look for affordable but best home-made dishes.</p>
+        <h3>1 — Kambal Eatery</h3>
+        <p><em>Cabrera St. Corner Vergel, Pasay City</em></p>
+        <p>Known for their Kapampangan dishes and fast turnover, often selling out by afternoon. Popular menu items include Sisig, Menudo, Betute Tugak (stuffed frogs), and Adobong Kamaru (mole crickets sautéed in vinegar and garlic).</p>
+        <h3>2 — Local Carinderia in Libertad (Cartimar)</h3>
+        <p><em>Libertad Market Area, Pasay City</em></p>
+        <p>Unnamed stalls offering authentic, daily cooked Filipino meals — most popular among travelers and local residents. No fixed menus, and they also offer international dishes such as sushi and dumplings.</p>
+        <h3>3 — MJ Carinderia</h3>
+        <p><em>F.B. Harrison Street, Pasay City, Metro Manila</em></p>
+        <p>MJ Carinderia offers daily home-made dishes and meryenda specialties such as Puto, Maja, and Bilo-Bilo (glutinous rice balls). Located near Star City along Roxas Boulevard.</p>
+        <div class="pull">"In a city known for travel, sometimes the best journey is simply finding a great meal at a local stall."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

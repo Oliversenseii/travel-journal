@@ -1,0 +1,18 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Runway -->
+  <rect x="20" y="110" width="140" height="12" rx="2" fill="#1a1a1a"/>
+  <rect x="30" y="118" width="120" height="3" fill="#c8102e"/>
+  
+  <!-- Airplane -->
+  <path d="M90 45 L105 75 L75 80 L85 95 L65 105 L120 98 L145 120 L130 85 L155 78 L125 70 Z" fill="#1a1a1a"/>
+  
+  <!-- Red accent on plane -->
+  <path d="M105 75 L120 78 L125 70 Z" fill="#c8102e"/>
+  
+  <!-- Sun / Sunset circle -->
+  <circle cx="135" cy="55" r="22" fill="#f5b800" opacity="0.95"/>
+  <circle cx="135" cy="55" r="15" fill="#ff6b00"/>
+  
+  <!-- Horizon glow -->
+  <rect x="20" y="105" width="140" height="8" fill="#ff6b00" opacity="0.25"/>
+</svg>
